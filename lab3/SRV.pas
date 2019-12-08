@@ -5,7 +5,7 @@ begin
      readln(A,B,C);
      asm
         MOV P, 0
-        MOV AX, 0
+        XOR AX, AX
         CMP A, AX
         JS @m
         CMP B, AX

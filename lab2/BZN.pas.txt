@@ -1,0 +1,19 @@
+program BZN;
+var A,C,Y:byte;
+    B:word;
+begin
+     writeln('ENTER:A,B,C');
+     readln(A,B,C);
+     asm
+        MOV AL,A
+        MOV BL,2
+        MUL BL
+        DIV C
+        MOV BL,AL
+        MOV AX,B
+        DIV A
+        ADD AL,BL
+        MOV Y,AL
+     end;
+     writeln('Y = ',Y);
+end.

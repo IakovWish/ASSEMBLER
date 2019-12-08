@@ -1,0 +1,19 @@
+program ZN;
+var A,C,Y:shortint;
+    B:integer;
+begin
+     writeln('ENTER:A,B,C');
+     readln(A,B,C);
+     asm
+        MOV AL,A
+        MOV BL,2
+        IMUL BL
+        IDIV C
+        MOV BL,AL
+        MOV AX,B
+        IDIV A
+        ADD AL,BL
+        MOV Y,AL
+     end;
+     writeln('Y = ',Y);
+end.

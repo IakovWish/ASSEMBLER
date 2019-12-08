@@ -5,27 +5,21 @@ begin
      readln(A,B,C);
      asm
         MOV P, 0
-        MOV BX, 1
-        MOV AX, A
-        CMP AX, BX
+        MOV AX, 0
+        CMP A, AX
         JS @m
-        MOV AX, B
-        CMP AX, BX
+        CMP B, AX
         JS @m
-        MOV AX, C
-        CMP AX, BX
+        CMP C, AX
         JS @m
         INC P
         JMP @s
         @m:
-        MOV AX, A
-        CMP AX, BX
+        CMP A, AX
         JNS @s
-        MOV AX, B
-        CMP AX, BX
+        CMP B, AX
         JNS @s
-        MOV AX, C
-        CMP AX, BX
+        CMP C, AX
         JNS @s
         DEC P
         @s: NOP

@@ -7,25 +7,25 @@ begin
         MOV P, 0
         MOV BX, 1
         MOV AX, A
-        IMUL BX
+        CMP AX, BX
         JS @m
         MOV AX, B
-        IMUL BX
+        CMP AX, BX
         JS @m
         MOV AX, C
-        IMUL BX
+        CMP AX, BX
         JS @m
         INC P
         JMP @s
         @m:
         MOV AX, A
-        IMUL BX
+        CMP AX, BX
         JNS @s
         MOV AX, B
-        IMUL BX
+        CMP AX, BX
         JNS @s
         MOV AX, C
-        IMUL BX
+        CMP AX, BX
         JNS @s
         DEC P
         @s: NOP

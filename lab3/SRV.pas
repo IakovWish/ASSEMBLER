@@ -4,6 +4,7 @@ begin
      writeln('ENTER A,B,C');
      readln(A,B,C);
      asm
+        MOV P, 0
         MOV BX, 1
         MOV AX, A
         IMUL BX
@@ -14,21 +15,19 @@ begin
         MOV AX, C
         IMUL BX
         JS @m
-        MOV P, 1
+        INC P
         JMP @s
         @m:
         MOV AX, A
         IMUL BX
-        JNS @r
+        JNS @s
         MOV AX, B
         IMUL BX
-        JNS @r
+        JNS @s
         MOV AX, C
         IMUL BX
-        JNS @r
-        MOV P, -1
-        JMP @s
-        @r: MOV P, 0
+        JNS @s
+        DEC P
         @s: NOP
      end;
      writeln ('P = ',P);

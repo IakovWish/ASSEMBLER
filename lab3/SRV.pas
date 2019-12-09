@@ -1,5 +1,6 @@
 program SRV;
-var A,B,C,P: integer;
+var A,B,C: integer;
+    P: shortint;
 begin
      writeln('ENTER A,B,C');
      readln(A,B,C);

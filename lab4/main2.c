@@ -7,7 +7,7 @@ i: 1..N;
 Cnt, Max: longint;
 begin
      Randomize;
-     writeln(' ');
+     writeln('');
      write('MASSIVE:');
      for i := 1 to N do
      begin
@@ -36,4 +36,5 @@ begin
      end;
      writeln('');
      Writeln('The maximum element of the array is ',Max,' and occurs ',Cnt,' times');
+     writeln('');
 end.

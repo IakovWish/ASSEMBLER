@@ -34,5 +34,5 @@ begin
         MOV Max, AX
      end;
      writeln('');
-        Writeln('The maximum element of the array is ',Max,' and occurs ',Count,' times');
+     Writeln('The maximum element of the array is ',Max,' and occurs ',Count,' times');
 end.

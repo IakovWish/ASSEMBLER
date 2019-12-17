@@ -35,4 +35,5 @@ begin
      end;
      writeln('');
      Writeln('The maximum element of the array is ',Max,' and occurs ',Count,' times');
+     writeln('');
 end.

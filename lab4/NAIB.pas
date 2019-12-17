@@ -6,7 +6,7 @@ i: 1..N;
 Count, Max: integer;
 begin
      Randomize;
-     writeln(' ');
+     writeln('');
      write('MASSIVE:');
      for i := 1 to N do
      begin
